@@ -2,6 +2,9 @@
 
 TBA
 
+> **Warning**
+> This project is using Godot 4 Beta 2 or above.
+
 ### Assets
 
 - [Sprouts Lands](https://cupnooble.itch.io/sprout-lands-asset-pack)
