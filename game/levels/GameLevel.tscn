@@ -1,12 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://blb6k07fvu3nj"]
+[gd_scene load_steps=17 format=3 uid="uid://bd50p6lqiflkx"]
 
-[ext_resource type="PackedScene" uid="uid://cv3wji1mx8xd3" path="res://characters/Player.tscn" id="1_ia2kb"]
+[ext_resource type="PackedScene" uid="uid://cs08peoagbtlv" path="res://actors/player/Player.tscn" id="1_ia2kb"]
 [ext_resource type="Texture2D" uid="uid://213o7wugwdxa" path="res://assets/Tilesets/Grass.png" id="2_m5wim"]
 [ext_resource type="Texture2D" uid="uid://bdttdkvc4jlug" path="res://assets/Tilesets/Hills.png" id="3_t4hlo"]
 [ext_resource type="Texture2D" uid="uid://cn4qlpxi6ri8n" path="res://assets/Tilesets/Tilled Dirt.png" id="4_0b7rf"]
 [ext_resource type="Texture2D" uid="uid://cf00hxec1r1d6" path="res://assets/Tilesets/Water.png" id="5_nfbos"]
 [ext_resource type="Texture2D" uid="uid://dlkks1t32nrb2" path="res://assets/Tilesets/Fences.png" id="6_wjph7"]
 [ext_resource type="Texture2D" uid="uid://ddedxb2fwlvnv" path="res://assets/Tilesets/Wooden House.png" id="7_go3a3"]
+[ext_resource type="PackedScene" uid="uid://3uis0p7uw0mw" path="res://items/food/Food.tscn" id="8_40mxn"]
+[ext_resource type="PackedScene" uid="uid://746xykwoufhu" path="res://actors/cow/Cow.tscn" id="9_qbosj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3kjms"]
 texture = ExtResource("2_m5wim")
@@ -742,3 +744,12 @@ metadata/_edit_lock_ = true
 [node name="Camera2d" type="Camera2D" parent="."]
 position = Vector2(56, 22)
 current = true
+
+[node name="Interactable" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Food" parent="Interactable" instance=ExtResource("8_40mxn")]
+position = Vector2(188, 101)
+
+[node name="Cow" parent="Interactable" instance=ExtResource("9_qbosj")]
+position = Vector2(117, 178)

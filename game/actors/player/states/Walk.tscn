@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2isrvlsoj7ls"]
+
+[ext_resource type="Script" path="res://actors/player/states/Walk.gd" id="1_84c5g"]
+
+[node name="Walk" type="Node"]
+script = ExtResource("1_84c5g")

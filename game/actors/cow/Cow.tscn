@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://746xykwoufhu"]
+
+[ext_resource type="Texture2D" uid="uid://5dixv2c81m2k" path="res://assets/Characters/Free Cow Sprites.png" id="1_4sndm"]
+[ext_resource type="Script" path="res://core/harmable/Harmable.gd" id="2_2t1s3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e6a0d"]
+
+[node name="Cow" type="Node2D"]
+
+[node name="Sprite2d" type="Sprite2D" parent="."]
+texture = ExtResource("1_4sndm")
+hframes = 3
+vframes = 2
+
+[node name="Harmable" type="Area2D" parent="."]
+script = ExtResource("2_2t1s3")
+damage = 10.0
+
+[node name="CollisionShape2d" type="CollisionShape2D" parent="Harmable"]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_e6a0d")

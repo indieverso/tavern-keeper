@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfiarb6uqbbyl"]
+
+[ext_resource type="Script" path="res://core/damageable/Damageable.gd" id="1_4lwib"]
+
+[node name="Damageable" type="Area2D"]
+script = ExtResource("1_4lwib")

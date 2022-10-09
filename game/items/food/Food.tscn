@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://3uis0p7uw0mw"]
+
+[ext_resource type="Texture2D" uid="uid://cbspdvh51vtdo" path="res://assets/Objects/Basic Plants.png" id="1_alpb5"]
+[ext_resource type="Script" path="res://core/actionable/Actionable.gd" id="2_6rusl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dujae"]
+
+[node name="Food" type="Node2D"]
+
+[node name="Sprite2d" type="Sprite2D" parent="."]
+texture = ExtResource("1_alpb5")
+hframes = 6
+vframes = 2
+
+[node name="Actionable" type="Area2D" parent="."]
+script = ExtResource("2_6rusl")
+
+[node name="CollisionShape2d" type="CollisionShape2D" parent="Actionable"]
+shape = SubResource("CircleShape2D_dujae")

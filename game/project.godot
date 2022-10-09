@@ -1,0 +1,102 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+_global_script_classes=[{
+"base": "Area2D",
+"class": &"Actionable",
+"language": &"GDScript",
+"path": "res://core/actionable/Actionable.gd"
+}, {
+"base": "Area2D",
+"class": &"Damageable",
+"language": &"GDScript",
+"path": "res://core/damageable/Damageable.gd"
+}, {
+"base": "Area2D",
+"class": &"Harmable",
+"language": &"GDScript",
+"path": "res://core/harmable/Harmable.gd"
+}, {
+"base": "Node",
+"class": &"State",
+"language": &"GDScript",
+"path": "res://core/statemachine/State.gd"
+}, {
+"base": "Node",
+"class": &"StateMachine",
+"language": &"GDScript",
+"path": "res://core/statemachine/StateMachine.gd"
+}, {
+"base": "Resource",
+"class": &"StatusAttribute",
+"language": &"GDScript",
+"path": "res://actors/StatusAttribute.gd"
+}]
+_global_script_class_icons={
+"Actionable": "",
+"Damageable": "",
+"Harmable": "",
+"State": "",
+"StateMachine": "",
+"StatusAttribute": ""
+}
+
+[application]
+
+config/name="Tavern Keeper"
+run/main_scene="res://levels/GameLevel.tscn"
+config/features=PackedStringArray("4.0")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Static="*res://core/singletons/Static.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=960
+window/size/window_height_override=540
+window/stretch/mode="canvas_items"
+window/stretch/scale=8.0
+
+[input]
+
+move_left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"unicode":0,"echo":false,"script":null)
+]
+}
+move_top={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"unicode":0,"echo":false,"script":null)
+]
+}
+move_right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"unicode":0,"echo":false,"script":null)
+]
+}
+move_down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"unicode":0,"echo":false,"script":null)
+]
+}
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_9="Actionable"
+2d_physics/layer_10="Damageable"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
