@@ -38,7 +38,7 @@ func _process(_delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	state_machine.physics_process(delta)
-	
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	state_machine.unhandled_input(event)

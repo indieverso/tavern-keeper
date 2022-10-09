@@ -1,11 +1,11 @@
-[gd_scene load_steps=36 format=3 uid="uid://cs08peoagbtlv"]
+[gd_scene load_steps=36 format=3 uid="uid://c2mmku805udkh"]
 
 [ext_resource type="Script" path="res://actors/player/Player.gd" id="1_mt5t7"]
-[ext_resource type="Texture2D" uid="uid://d1s1cs48yv0u5" path="res://assets/Characters/Basic Charakter Spritesheet.png" id="1_pehd1"]
-[ext_resource type="PackedScene" uid="uid://c0oi4a1jb858y" path="res://actors/InteractBaloon.tscn" id="2_6g286"]
+[ext_resource type="Texture2D" path="res://assets/Characters/Basic Charakter Spritesheet.png" id="1_pehd1"]
+[ext_resource type="PackedScene" path="res://actors/InteractBaloon.tscn" id="2_6g286"]
 [ext_resource type="Script" path="res://core/statemachine/StateMachine.gd" id="3_tttfy"]
-[ext_resource type="PackedScene" uid="uid://c7kil6dbk5mxt" path="res://actors/player/states/Idle.tscn" id="4_n4b23"]
-[ext_resource type="PackedScene" uid="uid://c2isrvlsoj7ls" path="res://actors/player/states/Walk.tscn" id="5_eyhv7"]
+[ext_resource type="PackedScene" path="res://actors/player/states/Idle.tscn" id="4_n4b23"]
+[ext_resource type="PackedScene" path="res://actors/player/states/Walk.tscn" id="5_eyhv7"]
 [ext_resource type="Script" path="res://core/damageable/Damageable.gd" id="6_pwrpg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ge4a4"]
