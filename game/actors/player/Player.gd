@@ -11,7 +11,7 @@ extends CharacterBody2D
 # Animation
 @onready var animation_tree : AnimationTree = $AnimationTree
 @onready var animation_state_machine : AnimationNodeStateMachinePlayback = animation_tree.get("parameters/playback")
-@onready var actionable_finder : Area2D = $Direction/ActionableFinder
+@onready var interactable_finder : Area2D = $Direction/InteractableFinder
 
 # Knockback
 @onready var sprite : Sprite2D = $Sprite2d
@@ -19,8 +19,8 @@ extends CharacterBody2D
 var knockback_position : Vector2 = Vector2.ZERO
 var knockback_tween : Tween
 
-# Actionable
-var nearest_actionable : Actionable = null
+# Interactable
+var nearest_interactable : Interactable = null
 
 
 func _ready() -> void:
@@ -33,7 +33,7 @@ func get_direction() -> Vector2:
 
 
 func _process(_delta: float) -> void:
-	check_nearest_actionable()
+	check_nearest_interactable()
 
 
 func _physics_process(delta: float) -> void:
@@ -55,27 +55,27 @@ func update_animation_direction(direction: Vector2) -> void:
 	animation_tree.set("parameters/Idle/blend_position", direction)
 
 
-func check_nearest_actionable() -> void:
-	var areas : Array[Area2D] = actionable_finder.get_overlapping_areas()
+func check_nearest_interactable() -> void:
+	var areas : Array[Area2D] = interactable_finder.get_overlapping_areas()
 	var shortest_distance : float = INF
-	var next_nearest_actionable : Actionable = null
+	var next_nearest_interactable : Interactable = null
 	
 	for area in areas:
 		var distance : float = area.global_position.distance_to(global_position)
 		if distance < shortest_distance:
 			shortest_distance = distance
-			next_nearest_actionable = area
+			next_nearest_interactable = area
 	
-	if not next_nearest_actionable:
-		nearest_actionable = null
+	if not next_nearest_interactable:
+		nearest_interactable = null
 		interact_ballon.visible = false
 		return
 	
-	if next_nearest_actionable != nearest_actionable or not is_instance_valid(next_nearest_actionable):
-		nearest_actionable = next_nearest_actionable
-		print_debug("Found actionable")
+	if next_nearest_interactable != nearest_interactable or not is_instance_valid(next_nearest_interactable):
+		nearest_interactable = next_nearest_interactable
+		print_debug("Found interactable")
 		interact_ballon.play("question")
-		# Events.emit_signal("nearest_actionable_changed", nearest_actionable)
+		# Events.emit_signal("next_nearest_interactable", nearest_interactable)
 
 
 func take_damage(damage: float) -> void:

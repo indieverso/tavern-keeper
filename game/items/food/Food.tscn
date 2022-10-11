@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://3uis0p7uw0mw"]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Texture2D" uid="uid://cbspdvh51vtdo" path="res://assets/Objects/Basic Plants.png" id="1_alpb5"]
-[ext_resource type="Script" path="res://core/actionable/Actionable.gd" id="2_6rusl"]
+[ext_resource type="Script" path="res://core/interactable/Interactable.gd" id="2_6rusl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dujae"]
 

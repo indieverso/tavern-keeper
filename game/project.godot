@@ -10,11 +10,6 @@ config_version=5
 
 _global_script_classes=[{
 "base": "Area2D",
-"class": &"Actionable",
-"language": &"GDScript",
-"path": "res://core/actionable/Actionable.gd"
-}, {
-"base": "Area2D",
 "class": &"Damageable",
 "language": &"GDScript",
 "path": "res://core/damageable/Damageable.gd"
@@ -23,6 +18,11 @@ _global_script_classes=[{
 "class": &"Harmable",
 "language": &"GDScript",
 "path": "res://core/harmable/Harmable.gd"
+}, {
+"base": "Area2D",
+"class": &"Interactable",
+"language": &"GDScript",
+"path": "res://core/interactable/Interactable.gd"
 }, {
 "base": "Node",
 "class": &"State",
@@ -40,9 +40,9 @@ _global_script_classes=[{
 "path": "res://actors/StatusAttribute.gd"
 }]
 _global_script_class_icons={
-"Actionable": "",
 "Damageable": "",
 "Harmable": "",
+"Interactable": "",
 "State": "",
 "StateMachine": "",
 "StatusAttribute": ""
